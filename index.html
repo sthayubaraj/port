@@ -58,8 +58,9 @@
             text-align: center;
         }
 
+        /* Updated color for #home section */
         #home {
-            background-color: #f9f9f9;
+            background-color: #e0e0e0;
         }
 
         #about {
@@ -96,6 +97,18 @@
             margin: 20px auto;
             max-width: 200px;
         }
+
+        /* Fade-in-out animation */
+        .fade-text {
+            animation: fadeInOut 3s ease-in-out infinite;
+            font-weight: bold;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -107,6 +120,7 @@
         <h2>Welcome</h2>
         <h2>(Jojolapa)</h2>
         <p>Welcome to my personal website. Discover my journey, skills, and projects.</p>
+        <p class="fade-text">Projects coming soon!!</p>
     </section>
 
     <section id="about">
