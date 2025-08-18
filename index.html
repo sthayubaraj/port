@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yubaraj Shrestha</title>
-  <link rel="icon"  type = "image/png" href="image.png">
+  <link rel="icon"  type="image/png" href="image.png">
   <style>
     body {
       margin: 0;
@@ -59,7 +59,6 @@
       text-align: center;
     }
 
-    /* Updated color for #home section */
     #home {
       background-color: #e0e0e0;
     }
@@ -102,7 +101,6 @@
       margin: 20px auto;
     }
 
-    /* Fade-in-out animation */
     .fade-text {
       animation: fadeInOut 3s ease-in-out infinite;
       font-weight: bold;
@@ -114,7 +112,6 @@
       100% { opacity: 0; }
     }
 
-    /* Contact form styling */
     .contact-form {
       max-width: 500px;
       margin: 30px auto;
@@ -146,7 +143,6 @@
       background-color: #0056b3;
     }
 
-    /* Social media icons */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -164,6 +160,30 @@
     .social-icons img:hover {
       transform: scale(1.2);
       filter: invert(62%) sepia(80%) saturate(610%) hue-rotate(359deg) brightness(104%) contrast(101%);
+    }
+
+    /* CV Button Styling */
+    .cv-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #007BFF, #00C6FF);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .cv-btn:hover {
+      background: linear-gradient(135deg, #0056b3, #0099cc);
+      transform: scale(1.08);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    .cv-btn:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
@@ -187,51 +207,45 @@
 
   <section id="about" style="text-align:center; padding:30px; font-family:Arial, sans-serif;">
 
-  <h2>About Me</h2>
-  <p>
-    I am Yubaraj Shrestha, a graduate in Computer Science and Information Technology (BSc.CSIT) 
-    from Amrit Science Campus (ASCOL). My expertise includes Python, Data Science, 
-    Machine Learning, and Software Development.
-  </p>
+    <h2>About Me</h2>
+    <p>
+      I am Yubaraj Shrestha, a graduate in Computer Science and Information Technology (BSc.CSIT) 
+      from Amrit Science Campus (ASCOL). My expertise includes Python, Data Science, 
+      Machine Learning, and Software Development.
+    </p>
 
-  <p>
-    I have completed specialized courses in Python libraries such as NumPy, Pandas, and Matplotlib, 
-    and participated in the Data Fellowship Program by DataCamp.
-  </p>
+    <p>
+      I have completed specialized courses in Python libraries such as NumPy, Pandas, and Matplotlib, 
+      and participated in the Data Fellowship Program by DataCamp.
+    </p>
 
-  <p>
-    Throughout my BSc.CSIT program, I gained in-depth knowledge and practical experience in a 
-    wide range of subjects, including:
-  </p>
+    <p>
+      Throughout my BSc.CSIT program, I gained in-depth knowledge and practical experience in a 
+      wide range of subjects, including:
+    </p>
 
-  <!-- Subjects Section -->
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:800px; margin:20px auto; text-align:left;">
-    <p>Programming Languages: C, C++, Java, .NET, Python</p>
-    <p>Data Structures & Algorithms</p>
-    <p>Database Management Systems (DBMS)</p>
-    <p>Operating Systems</p>
-    <p>Computer Networks</p>
-    <p>Software Engineering</p>
-    <p>Web Technologies (HTML, CSS, JavaScript, PHP)</p>
-    <p>Artificial Intelligence & Machine Learning</p>
-    <p>Compiler Design & Theory of Computation</p>
-    <p>Numerical Methods & Statistics</p>
-    <p>Simulation & Modeling</p>
-    <p>Cryptography & Network Security</p>
-    <p>Project Work & Internships</p>
-  </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; max-width:800px; margin:20px auto; text-align:left;">
+      <p>Programming Languages: C, C++, Java, .NET, Python</p>
+      <p>Data Structures & Algorithms</p>
+      <p>Database Management Systems (DBMS)</p>
+      <p>Operating Systems</p>
+      <p>Computer Networks</p>
+      <p>Software Engineering</p>
+      <p>Web Technologies (HTML, CSS, JavaScript, PHP)</p>
+      <p>Artificial Intelligence & Machine Learning</p>
+      <p>Compiler Design & Theory of Computation</p>
+      <p>Numerical Methods & Statistics</p>
+      <p>Simulation & Modeling</p>
+      <p>Cryptography & Network Security</p>
+      <p>Project Work & Internships</p>
+    </div>
 
-  <!-- CV Button -->
-  <p style="margin-top:30px;">
-    <a href="yubarajshrestha.pdf" target="_blank" 
-       style="background:#007BFF; color:white; padding:12px 25px; border-radius:8px; text-decoration:none; font-weight:bold;">
-       📄 View / Download My CV
-    </a>
-  </p>
-
-</section>
-
-
+    <!-- CV Button -->
+    <p style="margin-top:30px;">
+      <a href="yubarajshrestha.pdf" download="Yubaraj_Shrestha_CV.pdf" class="cv-btn">
+        📄 Download My CV
+      </a>
+    </p>
 
   </section>
 
@@ -242,10 +256,10 @@
     <p>Phone: 9807353973</p>
     <p>GitHub: <a href="https://github.com/yubarajstha" target="_blank">github.com/yubarajstha</a></p>
     <p>Website: <a href="http://yubaraj-shrestha.com.np" target="_blank">yubaraj-shrestha.com.np</a></p>
-    <p><a href="https://seeqbasicomputer.blogspot.com/2025/04/">Computer Science Class 9 New Syllabus(Python) : click here</a></p>
-    <p><a href="https://seeqbasicomputer.blogspot.com/2025/03//">Computer Science Passed Year Question Solved Class 10 : click here</a></p>
-    <p><a href="https://docs.google.com/document/d/1N3M5OaXGJM_1r8e1xNunm8HM1fv5FnO1aM8pXYNx66E/edit?tab=t.0#heading=h.kq0p40sime3h/">100 Days challange online courses : click here</a></p>
-    <p><a href="https://roadmap.sh/">For Complete roadmap: click here</a></p>
+    <p><a href="https://seeqbasicomputer.blogspot.com/2025/04/">Computer Science Class 9 New Syllabus (Python) : click here</a></p>
+    <p><a href="https://seeqbasicomputer.blogspot.com/2025/03/">Computer Science Passed Year Question Solved Class 10 : click here</a></p>
+    <p><a href="https://docs.google.com/document/d/1N3M5OaXGJM_1r8e1xNunm8HM1fv5FnO1aM8pXYNx66E/edit?tab=t.0#heading=h.kq0p40sime3h/">100 Days Challenge Online Courses : click here</a></p>
+    <p><a href="https://roadmap.sh/">For Complete Roadmap: click here</a></p>
 
     <form action="https://formsubmit.co/it.yubarajshrestha@gmail.com" method="POST" class="contact-form">
       <input type="hidden" name="_captcha" value="false">
@@ -262,8 +276,7 @@
       <a href="https://facebook.com/yubarajshresthaaa" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
       <a href="https://github.com/yubarajstha" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" /></a>
       <a href="https://www.linkedin.com/in/yubarajshrestha/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
-       <a href="https://instagram.com/yubarajshresthaa" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-
+      <a href="https://instagram.com/yubarajshresthaa" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
     </div>
     <p>&copy; 2025 Yubaraj Shrestha. All rights reserved.</p>
   </footer>
