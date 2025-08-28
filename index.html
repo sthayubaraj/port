@@ -35,6 +35,7 @@
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
       backdrop-filter: blur(6px);
+      transition: 0.3s;
     }
     nav a {
       color: var(--text);
@@ -44,6 +45,35 @@
       transition: color 0.3s;
     }
     nav a:hover { color: var(--primary); }
+
+    /* Hamburger toggle */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-between;
+        padding: 14px 20px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        display: none;
+        margin: 12px 0;
+        text-align: center;
+        width: 100%;
+      }
+      nav.active a {
+        display: block;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
 
     /* Hero */
     header {
@@ -58,7 +88,7 @@
       padding: 20px;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: clamp(1.8rem, 5vw, 3rem);
       margin-bottom: 10px;
       white-space: nowrap;
       border-right: 3px solid white;
@@ -74,7 +104,7 @@
       50% { border-color: transparent; }
     }
     header p {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 3.5vw, 1.2rem);
       opacity: 0;
       animation: fadeIn 2s ease-in forwards;
       animation-delay: 4.2s;
@@ -83,13 +113,19 @@
       to { opacity: 1; }
     }
     .top-center-image {
-      width: 160px;
-      height: 160px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin: 20px auto;
       border: 5px solid white;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 768px) {
+      .top-center-image {
+        width: 160px;
+        height: 160px;
+      }
     }
     .cv-btn {
       display: inline-block;
@@ -109,10 +145,15 @@
 
     /* Sections */
     section {
-      padding: 80px 20px;
+      padding: 60px 15px;
       max-width: 1100px;
       margin: auto;
       text-align: center;
+    }
+    @media (max-width: 480px) {
+      section {
+        padding: 40px 10px;
+      }
     }
     section h2 {
       font-size: 2rem;
@@ -197,6 +238,7 @@
       padding: 22px;
       border-radius: 12px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      width: 100%;
     }
     .contact-form input,
     .contact-form textarea {
@@ -205,7 +247,7 @@
       margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
     .contact-form input[type="submit"] {
       background: var(--primary);
@@ -241,6 +283,7 @@
 
   <!-- Navbar -->
   <nav>
+    <div class="menu-toggle">☰</div>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#education">Education</a>
@@ -256,14 +299,9 @@
     <h1>Yubaraj Shrestha</h1>
     <p>Computer Science Graduate | AI & ML Enthusiast | Python Developer</p>
     <!-- View CV in new tab -->
-<a href="assets/yubarajshrestha.pdf" target="_blank" class="cv-btn">
-  👀 View CV
-</a>
-
-<!-- Download CV -->
-<a href="assets/yubarajshrestha.pdf" download="Yubaraj_Shrestha_CV.pdf" class="cv-btn">
-  📄 Download CV
-</a>
+    <a href="assets/yubarajshrestha.pdf" target="_blank" class="cv-btn">👀 View CV</a>
+    <!-- Download CV -->
+    <a href="assets/yubarajshrestha.pdf" download="Yubaraj_Shrestha_CV.pdf" class="cv-btn">📄 Download CV</a>
   </header>
 
   <!-- About -->
@@ -345,6 +383,15 @@
     </div>
     <p>&copy; 2025 Yubaraj Shrestha. All rights reserved.</p>
   </footer>
+
+  <!-- JS for Navbar Toggle -->
+  <script>
+    const nav = document.querySelector("nav");
+    const toggle = document.querySelector(".menu-toggle");
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
 
 </body>
 </html>
