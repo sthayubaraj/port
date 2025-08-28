@@ -142,7 +142,40 @@
     .card:hover { transform: translateY(-6px); }
     .card h3 { color: var(--accent); }
 
-    /* Contact Section (split layout) */
+    /* Resources Section Buttons */
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: white;
+    }
+    .btn-light {
+      background: white;
+      color: var(--text);
+      border: 2px solid #e0e0e0;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Section */
     #contact {
       display: flex;
       flex-wrap: wrap;
@@ -213,6 +246,7 @@
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#resources">Resources</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -221,7 +255,15 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC0xEpDnBr9tR5P4rdwdf8eCpyXqcGBctJMQ&s" alt="Profile" class="top-center-image">
     <h1>Yubaraj Shrestha</h1>
     <p>Computer Science Graduate | AI & ML Enthusiast | Python Developer</p>
-    <a href="yubarajshrestha.pdf" download="Yubaraj_Shrestha_CV.pdf" class="cv-btn">📄 Download CV</a>
+    <!-- View CV in new tab -->
+<a href="assets/yubarajshrestha.pdf" target="_blank" class="cv-btn">
+  👀 View CV
+</a>
+
+<!-- Download CV -->
+<a href="assets/yubarajshrestha.pdf" download="Yubaraj_Shrestha_CV.pdf" class="cv-btn">
+  📄 Download CV
+</a>
   </header>
 
   <!-- About -->
@@ -264,6 +306,15 @@
       <div class="card"><h3>📊 Student Result Analysis</h3><p>Python + Pandas + Matplotlib project for analyzing academic performance.</p></div>
       <div class="card"><h3>🌐 Portfolio Website</h3><p>Responsive personal portfolio showcasing skills, projects, and experience.</p></div>
       <div class="card"><h3>🤖 ML Model</h3><p>Classification model to predict student outcomes based on dataset.</p></div>
+    </div>
+  </section>
+
+  <!-- Class 9 & 10 Resources -->
+  <section id="resources">
+    <h2>Computer Science Resources for Class 9 & 10</h2>
+    <div class="btn-row">
+      <a class="btn btn-accent" href="https://seeqbasicomputer.blogspot.com/2025/04/" target="_blank">📘 Class 9 Resources</a>
+      <a class="btn btn-light" href="https://seeqbasicomputer.blogspot.com/2025/03/" target="_blank">📗 Class 10 Resources</a>
     </div>
   </section>
 
